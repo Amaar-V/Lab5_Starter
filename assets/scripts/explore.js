@@ -35,14 +35,7 @@ function init() {
 function image() {
   let face =  document.querySelector("#explore").querySelector("img");
   if(speechSynthesis.speaking)
-    face.src = "/assets/images/smiling-open.png";
+    face.src = "assets/images/smiling-open.png";
   else
-    face.src = "/assets/images/smiling.png";
+    face.src = "assets/images/smiling.png";
 }
-
-/*
-what did you say to me you little B? I will have you know 
-that I am top of my class in the Navy Seals with high ranking
-abilities in fish eating and laying in the sun. I even got a 
-honorable medal in arf arf so you better watch out.
-*/ 

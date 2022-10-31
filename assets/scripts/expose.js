@@ -14,13 +14,13 @@ function init() {
   selectElement.addEventListener('change', (event) => {
     currentHorn = event.target.value;
     if(event.target.value == "select")
-      img.src="/assets/images/no-image.png";
+      img.src="assets/images/no-image.png";
     else if(event.target.value == "air-horn")
-      img.src="/assets/images/air-horn.svg";
+      img.src="assets/images/air-horn.svg";
     else if(event.target.value == "car-horn")
-      img.src="/assets/images/car-horn.svg";
+      img.src="assets/images/car-horn.svg";
     else if(event.target.value == "party-horn")
-      img.src="/assets/images/party-horn.svg";
+      img.src="assets/images/party-horn.svg";
   });
 
   const volume = exposeElement.children[3].children[0];
@@ -31,13 +31,13 @@ function init() {
   volume.addEventListener('input',(event)=>{
     vol = volume.value;
     if(vol==0)
-      volumeImage.src = "/assets/icons/volume-level-0.svg";
+      volumeImage.src = "assets/icons/volume-level-0.svg";
     else if(vol<33)
-      volumeImage.src = "/assets/icons/volume-level-1.svg";
+      volumeImage.src = "assets/icons/volume-level-1.svg";
     else if(vol<67)
-      volumeImage.src = "/assets/icons/volume-level-2.svg";
+      volumeImage.src = "assets/icons/volume-level-2.svg";
     else 
-      volumeImage.src = "/assets/icons/volume-level-3.svg";
+      volumeImage.src = "assets/icons/volume-level-3.svg";
       vol = volume.value/100;
   });
 
@@ -55,7 +55,7 @@ function init() {
 }
 
 function airHorn(aud,vol) {
-  aud.src="/assets/audio/air-horn.mp3";
+  aud.src="assets/audio/air-horn.mp3";
   aud.load();
   aud.volume = vol;
 
@@ -63,14 +63,14 @@ function airHorn(aud,vol) {
 }
 
 function carHorn(aud,vol) {
-  aud.src="/assets/audio/car-horn.mp3";
+  aud.src="assets/audio/car-horn.mp3";
   aud.load();
   aud.volume = vol;
   aud.play();
 }
 
 function partyHorn(aud,vol,jsConfetti) {
-  aud.src="/assets/audio/party-horn.mp3";
+  aud.src="assets/audio/party-horn.mp3";
   aud.load();
   aud.volume = vol;
   aud.play();
